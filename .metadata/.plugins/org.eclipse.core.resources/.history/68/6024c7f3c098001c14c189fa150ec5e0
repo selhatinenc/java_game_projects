@@ -1,0 +1,101 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	
+	static List<String> allLines;
+	static  ArrayList<ArrayList<String>> dailypersondata;//this holds data of all users who enterted the data daily 
+	 static String[][] listofcommand;
+	 static Food food;
+	 static People people;
+	 static Sport sport;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		food=new Food();
+		food.food();
+		
+		people=new People();
+		people.people();
+		
+		 sport=new Sport();
+		sport.sport();
+		
+		command();
+		
+		
+		
+
+	}
+
+	private static void command () {
+
+		try {
+			allLines = Files.readAllLines(Paths.get("C:\\Users\\Enc\\eclipse-workspace\\Assignment_1\\src\\command.txt"));
+			listofcommand=new String[allLines.size()][3];
+			dailypersondata=new ArrayList<ArrayList<String>>();//this hold person id , colori and healthy or unhealty
+			int whilenumber=0;
+			while(whilenumber<allLines.size()) { 
+				String[] lines=allLines.get(whilenumber).trim().split("\t");
+				
+				
+				whilenumber++;
+				if(lines.length==1) {
+					String commandprint=lines[0];
+					if(commandprint.length()==9)
+						printList();
+					if (commandprint.length()==12) {
+						StringBuffer personidbuffer=new StringBuffer(commandprint);
+						
+						personidbuffer= personidbuffer.delete(0, 6).deleteCharAt(5);
+						int personidint= Integer.valueOf( personidbuffer.toString());
+						print(personidint);
+						
+					}
+						
+					
+				}
+				if (lines.length==3) {
+					
+					
+					listofcommand[whilenumber][0]=lines[0];
+					listofcommand[whilenumber][1]=lines[1];
+					listofcommand[whilenumber][2]=lines[2];
+					int activityid= Integer.valueOf(listofcommand[whilenumber][1]);
+					if (activityid<1100) {
+						String result=food.findfooddata(listofcommand[whilenumber][1]);
+						System.out.println(result);
+					}
+					if (activityid<1500 & activityid>1100) {
+						
+					}
+					else {
+						
+					}
+					
+				}
+				else {
+					System.out.println("COMMAND WASN'T FOUND");
+				}
+				
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	private static void print(int number) {
+		// TODO Auto-generated method stub
+		System.out.println(number+"  is number");
+	}
+
+	private static void printList() {
+		// TODO Auto-generated method stub
+		System.out.println("printlist");
+	} 
+	
+
+}

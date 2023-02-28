@@ -1,0 +1,40 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
+public class Sport {
+	static List<String> allLines;
+	 String[][] listofsport;
+	
+
+	public void sport() {
+		
+		readfile();
+		
+		
+			
+		}
+	
+		
+		
+	
+  void readfile() {
+		
+		try {
+			allLines = Files.readAllLines(Paths.get("C:\\Users\\Enc\\eclipse-workspace\\Assignment_1\\src\\sport.txt"));
+			int whilenumber=0;
+			while(whilenumber<allLines.size()) {
+				String[] lines=allLines.get(whilenumber).trim().split("\t");
+				listofsport=new String[allLines.size()][3];
+				listofsport[whilenumber][0]=lines[0];
+				listofsport[whilenumber][1]=lines[1];
+				listofsport[whilenumber][2]=lines[2];
+				whilenumber++;
+			
+		} }catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

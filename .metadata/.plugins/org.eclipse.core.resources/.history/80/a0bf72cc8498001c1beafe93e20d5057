@@ -1,0 +1,44 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
+public class People {
+	static List<String> allLines;
+	 String[][] listofpeople;
+	
+
+	public void people() {
+		
+		readfile();
+		
+		
+			
+		}
+	
+		
+		
+	
+  void readfile() {
+		
+		try {
+			allLines = Files.readAllLines(Paths.get("C:\\Users\\Enc\\eclipse-workspace\\Assignment_1\\src\\people.txt"));
+			int whilenumber=0;
+			while(whilenumber<allLines.size()) {
+				String[] lines=allLines.get(whilenumber).trim().split("\t");
+				listofpeople=new String[allLines.size()][3];
+				listofpeople[whilenumber][0]=lines[0];
+				listofpeople[whilenumber][1]=lines[1];
+				listofpeople[whilenumber][2]=lines[2];
+				System.out.println(listofpeople[whilenumber][0]);
+				System.out.println(listofpeople[whilenumber][1]);
+				System.out.println(listofpeople[whilenumber][2]);
+				
+				whilenumber++;
+			
+		} }catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

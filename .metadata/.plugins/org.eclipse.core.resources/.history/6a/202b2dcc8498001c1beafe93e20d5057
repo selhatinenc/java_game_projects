@@ -1,0 +1,20 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Food food=new Food();
+		food.food();
+		
+		People people=new People();
+		people.people();
+		
+		Sport sport=new Sport();
+		sport.sport();
+		
+		
+		
+
+	}
+
+}

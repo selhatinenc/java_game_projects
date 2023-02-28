@@ -1,0 +1,20 @@
+
+public class FitnessApp {
+
+	public static void main(String[] args) {
+		show();
+
+		FitnessAssessment assessment=new FitnessAssessment();
+
+	}
+	private static void show() {
+		System.out.println("--------------MENU--------------\r\n"
+				+ "1 - Calculate Target Heart Rate\r\n"
+				+ "2 - Calculate Waist/Hip Ratio\r\n"
+				+ "3 - Body Mass Index\r\n"
+				+ "4 - Display Fitness Level\r\n"
+				+ "5 - Quit\r\n"
+				+ "Enter choice:");
+	}
+
+}

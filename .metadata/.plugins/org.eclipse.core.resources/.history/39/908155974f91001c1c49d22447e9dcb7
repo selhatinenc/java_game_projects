@@ -1,0 +1,34 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		try {
+			FileReader filereader=new FileReader("quiz-1/src/operation.txt");
+			try {
+				int opertaiondata=filereader.read();
+				
+				while(opertaiondata!=-1) {
+					System.out.println(opertaiondata);
+					
+				}
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+	}
+
+}

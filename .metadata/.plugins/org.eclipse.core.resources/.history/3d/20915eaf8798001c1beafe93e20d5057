@@ -1,0 +1,51 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
+public class Main {
+	static List<String> allLines;
+	 String[][] listofcommand;
+
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Food food=new Food();
+		food.food();
+		
+		People people=new People();
+		people.people();
+		
+		Sport sport=new Sport();
+		sport.sport();
+		
+		
+		
+
+	}
+
+	private void command () {
+
+		try {
+			allLines = Files.readAllLines(Paths.get("C:\\Users\\Enc\\eclipse-workspace\\Assignment_1\\src\\command.txt"));
+			listofcommand=new String[allLines.size()][3];
+
+			int whilenumber=0;
+			while(whilenumber<allLines.size()) { 
+				String[] lines=allLines.get(whilenumber).trim().split("\t");
+				
+				listofcommand[whilenumber][0]=lines[0];
+				listofcommand[whilenumber][1]=lines[1];
+				listofcommand[whilenumber][2]=lines[2];
+				whilenumber++;
+				
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	} 
+	
+
+}

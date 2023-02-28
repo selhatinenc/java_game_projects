@@ -1,0 +1,60 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
+public class Food {
+	static List<String> allLines;
+	 String[][] listoffood;
+	
+	 String foodname;String foodcalorie;
+	public void food() {
+		
+		readfile();
+		
+		
+			
+		}
+	
+		
+		
+	
+  void readfile() {
+		
+		try {
+			allLines = Files.readAllLines(Paths.get("C:\\Users\\Enc\\eclipse-workspace\\Assignment_1\\src\\food.txt"));
+			listoffood=new String[allLines.size()][3];
+
+			int whilenumber=0;
+			while(whilenumber<allLines.size()) {
+				String[] lines=allLines.get(whilenumber).trim().split("\t");
+				listoffood[whilenumber][0]=lines[0];
+				listoffood[whilenumber][1]=lines[1];
+				listoffood[whilenumber][2]=lines[2];
+				whilenumber++;
+			
+		} }catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+  public void findfooddata(String foodid) {
+	  int whilenumber=0;
+		while(whilenumber<listoffood.length) {  
+			if (foodid.equals(listoffood[whilenumber][0])) {
+				foodname=listoffood[whilenumber][1];
+				 foodcalorie=listoffood[whilenumber][2];
+				 Main2 main=new Main2();
+				 main.result=foodname+","+foodcalorie;
+					
+
+			}
+			
+		}
+		
+		 
+		
+		
+	  
+  }
+
+}

@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scanner= new Scanner(System.in);
+		System.out.print("what is your name : " );
+		String name=scanner.nextLine();
+		
+		// TODO Auto-generated method stub
+		System.out.print("name:" +name);
+		
+		System.out.print("\t selllllllllllllllllloooo \n \nKÝng is me\t");
+		System.out.println(); // system+ctrl +space
+		System.out.println();// edit - find and replace
+		// this is a comment
+		/*
+		 * king
+		 * you 
+		 * are big 
+		 * but 
+		 * big man
+		 * man
+		 */
+		
+	}
+
+}

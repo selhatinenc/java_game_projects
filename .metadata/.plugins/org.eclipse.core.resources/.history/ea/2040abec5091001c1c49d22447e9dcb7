@@ -1,0 +1,33 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	
+			File file=new File("operation.txt");
+			try {
+				System.out.println("the path is "+file.getCanonicalPath());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			Scanner input;
+			try {
+				input = new Scanner(file);
+				String in="";
+				input.nextLine();
+			
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+}
+}

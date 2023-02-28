@@ -1,0 +1,83 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
+public class Main2 {
+
+	public static String result;
+	static People people;
+	static Sport sport;
+	static Food food;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 people=new People();
+		people.people();
+
+		 sport=new Sport();
+		sport.sport();
+		
+		 food=new Food();
+		food.food();
+		
+		readfile();
+	}
+
+	private static void readfile() {
+		// TODO Auto-generated method stub
+		
+		try {
+			List<String> allLines = Files.readAllLines(Paths.get("C:\\Users\\Enc\\eclipse-workspace\\Assignment_1\\src\\command.txt"));
+			int whilenumber=0;
+			while(whilenumber<allLines.size()) {
+				String[] lines=allLines.get(whilenumber).trim().split("\t");
+				if(lines.length==1) {
+					if(lines[0].length()==9) {
+						printlist();
+					}
+					else {
+						StringBuffer bffr=new StringBuffer(lines[0]);
+						
+						int personid=Integer.valueOf( bffr.delete(0, 6).deleteCharAt(6).toString());
+						print(personid);
+					}
+					
+					whilenumber++;
+				}
+				else{
+					int stuffid= Integer.valueOf(lines[1]);
+				 if (stuffid<1100) {
+					 food.findfooddata(lines[1]);
+					 System.out.println(lines[1]);
+					 
+					
+				}
+				 else if (stuffid<1500) {
+					
+				} else {
+					
+
+				}
+				
+				whilenumber++;
+			}
+			
+		} }catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static void print(int personid) {
+		// TODO Auto-generated method stub
+		System.out.println("print");
+	}
+
+	private static void printlist() {
+		// TODO Auto-generated method stub
+		System.out.println("printlist");
+	}
+
+	
+
+}

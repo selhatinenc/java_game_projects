@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Properties;
+
+public class Main {
+	public static void main(String[] args) throws ExceptionindexoutofBound {
+		
+//		 Max max =new Max();	 System.out.println(max.maximum(1,2, 2));
+//		 Stack<Integer> stackint=new Stack<Integer>();
+//		 WhichConstructor wc = new WhichConstructor("test"); 
+
+		A a = new A(); 
+		 System.out.print(a); 
+		 a.x=0; 
+		 System.out.print(a); 
+		 B b = new B(); 
+		 System.out.print(a); 
+		 System.out.print(b); 
+		 System.out.println(A.x); 
+		 b.x=5; 
+		 System.out.println(b); 
+		 System.out.println(b.x);
+	
+	
+	
+	
+	}}
+ class A { 
+public static int x; 
+ 
+public A(){ x=6;} 
+ 
+public String toString(){ 
+ return Integer.toString(x); 
+ } 
+} 
+ class B extends A { 
+public B(){ x=10;} 
+}

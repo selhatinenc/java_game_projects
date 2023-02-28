@@ -1,0 +1,87 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
+public class Main {
+	static List<String> allLines;
+	 static String[][] listofcommand;
+
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Food food=new Food();
+		food.food();
+		
+		People people=new People();
+		people.people();
+		
+		Sport sport=new Sport();
+		sport.sport();
+		
+		command();
+		
+		
+		
+
+	}
+
+	private static void command () {
+
+		try {
+			allLines = Files.readAllLines(Paths.get("C:\\Users\\Enc\\eclipse-workspace\\Assignment_1\\src\\command.txt"));
+			listofcommand=new String[allLines.size()][3];
+
+			int whilenumber=0;
+			while(whilenumber<allLines.size()) { 
+				String[] lines=allLines.get(whilenumber).trim().split("\t");
+				
+				
+				whilenumber++;
+				if(lines.length==1) {
+					String commandprint=lines[0];
+					if(commandprint.length()==9)
+						printList();
+					if (commandprint.length()==12) {
+						StringBuffer personidbuffer=new StringBuffer(commandprint);
+						
+						personidbuffer= personidbuffer.delete(0, 6).deleteCharAt(5);
+						int personidint= Integer.valueOf( personidbuffer.toString());
+						print(personidint);
+						
+					}
+						
+					
+				}
+				if (lines.length==3) {
+					
+					listofcommand[whilenumber][0]=lines[0];
+					listofcommand[whilenumber][1]=lines[1];
+					listofcommand[whilenumber][2]=lines[2];
+					
+					
+				}
+				else {
+					System.out.println("COMMAND WASN'T FOUND");
+				}
+				
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	private static void print(int number) {
+		// TODO Auto-generated method stub
+		System.out.println(number+"  is number");
+	}
+
+	private static void printList() {
+		// TODO Auto-generated method stub
+		System.out.println("printlist");
+	} 
+	
+
+}

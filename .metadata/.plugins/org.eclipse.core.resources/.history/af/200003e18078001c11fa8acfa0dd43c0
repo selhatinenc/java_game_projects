@@ -1,0 +1,126 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+public class Main {
+
+	public static void main(String[] args) {
+		String string="I am string";
+		char mychar ='Q';
+		int intmy=21;
+		double mydouble=21.21;
+		System.out.printf("it '%3s ' ",string);
+		System.out.printf("it' %c ' ",mychar);
+		System.out.printf("it \"%d \"  ",intmy);
+		System.out.printf("it \"%2,-21f ",mydouble);
+		
+	
+	}
+ 
+}
+/*
+ *
+ *!!!!!!!!!!!!!!!       sysout
+ *
+ * 
+ * ArrayList<ArrayList<String>> alllist= new ArrayList();
+		ArrayList<String> grocery= new ArrayList();
+		grocery.add("fruit");
+		grocery.add("juice");
+		grocery.add("banana");
+		
+		ArrayList<String> other= new ArrayList();
+		other.add("choclate");
+		other.add("milk");
+		other.add("cola");
+		other.add("strawberries");
+		
+		
+		// add all list to all list
+		alllist.add(other);
+		alllist.add(grocery);
+		System.out.println(alllist);
+		;
+		System.out.println(alllist);
+ * 
+ * ----------------------------------------------------------------------------
+ * Scanner scanner= new Scanner(System.in);
+		System.out.print("what is your name : " );
+		String name=scanner.nextLine();
+		
+		// TODO Auto-generated method stub
+		System.out.println(" AGE: ");
+		int ageofreis= scanner.nextInt();
+		scanner.nextLine();
+		System.out .println(" Statu: ");
+		String statu=scanner.nextLine();
+		System.out.println("biggility: ");
+		int biggilty=scanner.nextInt();
+		System.out.print("King:" +name+"\n Age of King: "+ ageofreis+"\n Statu of King: "+statu+"\n Biggest: "+biggilty);
+		-----------------------------------------------------------------------------------------
+		String name= JOptionPane.showInputDialog("Enter here name: ");
+		JOptionPane.showMessageDialog(null,"KRALIMIZ!"+ name);		
+
+		int age= Integer.parseInt(JOptionPane.showInputDialog("ENTER HERE AGE OUR KÝNG!: ")) ;
+		JOptionPane.showMessageDialog(null,"age of out King! :"+ age);
+		double height= Double.parseDouble(JOptionPane.showInputDialog("Enter HERE HEÝGHT"));
+		System.out.println("Name : "+ name+"\n Age: "+age+"\n Height: "+height);
+		----------------------------------------------------------------------------------------------
+		Double x=  Double.parseDouble(JOptionPane.showInputDialog("X: "));
+		Double y= Double.parseDouble(JOptionPane.showInputDialog("Y: "));	
+		Double z= Math.sqrt((x*x)+(y*y));
+		JOptionPane.showMessageDialog(null,"Hyptones: "+z);
+		--------------------------------------------------------------------------------------------------
+		int row;
+		int columns;
+		String sembol;
+		Scanner scanner= new Scanner(System.in);
+		
+		System.out.println("ENTER HERE ROW: ");
+		row=scanner.nextInt();
+		
+		System.out.println("ENTER HERE COLUMNS: ");
+		columns=scanner.nextInt();
+		System.out.println("ENTER HERE SEMBOL: ");
+		sembol= scanner.next();
+		for (int i=1;i<=row;i++) {
+			System.out.println();
+			for (int j=1;j<=columns;j++) {
+				System.out.print(sembol);
+			}
+		}
+		--------------------------------------------------------------------------------------------------------
+		Scanner scanner= new Scanner(System.in);
+		System.out.println("ENTER HERE ROW: ");
+		
+		int row= scanner.nextInt();
+		System.out.println("ENTER HERE COLUMN: ");
+		int column= scanner.nextInt();
+		System.out.println("ENTER HERE YOUR STORY");
+		
+		
+		
+		String[][] array= new String[row][column];
+		
+		for (int i=0;i<=row-1;i++) {
+			System.out.println();
+			for (int j=0;j<=column-1;j++) {
+				String story=scanner.next();
+
+				array[i][j]=story;
+				
+				
+			}
+		}
+		for(int i=0;i<=row-1;i++) {
+			System.out.println();
+			for(int j=0;j<=column-1;j++) {
+				System.out.print(array[i][j]+"*");
+				
+			}
+			
+		}
+-------------------------------------------------------------------------------------------
+		
+		
+		
+	*/	

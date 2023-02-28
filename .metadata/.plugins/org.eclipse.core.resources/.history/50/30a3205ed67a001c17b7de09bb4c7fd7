@@ -1,0 +1,19 @@
+import java.awt.Color;
+import java.util.Random;
+import javax.swing.JOptionPane;
+
+import javax.swing.JFrame;
+
+public class MYJFrame extends JFrame {
+	MYJFrame(){
+		Random random=new Random();
+		this.setTitle("Richard Feynman");
+		this.setDefaultCloseOperation(ABORT);
+		this.setSize(getPreferredSize());
+		this.getContentPane().setBackground(new Color(0,0,0));
+		this.getContentPane().setBackground(new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255)));
+		
+		this.setVisible(true);
+	}
+
+}

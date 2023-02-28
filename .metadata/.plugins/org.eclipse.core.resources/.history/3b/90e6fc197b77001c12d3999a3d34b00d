@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scanner= new Scanner(System.in);
+		System.out.print("what is your name : " );
+		String name=scanner.nextLine();
+		
+		// TODO Auto-generated method stub
+		System.out.println(" AGE: ");
+		int ageofreis= scanner.nextInt();
+		scanner.nextLine();
+		System.out .println(" Statu: ");
+		String statu=scanner.nextLine();
+		scanner.nextInt();
+		System.out.print("\nbiggility: ");
+		int biggilty=scanner.nextInt();
+		System.out.print("King:" +name+"\n Age of King: "+ ageofreis+"\n Statu of King: "+statu+"\n Biggest: "+biggilty);
+		
+
+		
+	}
+
+}

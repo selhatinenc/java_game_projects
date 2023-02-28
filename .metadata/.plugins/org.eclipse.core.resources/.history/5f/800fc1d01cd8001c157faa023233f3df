@@ -1,0 +1,57 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Properties;
+
+public class Main {
+	public static void main(String[] args) throws ExceptionindexoutofBound {
+		
+//		 Max max =new Max();	 System.out.println(max.maximum(1,2, 2));
+//		 Stack<Integer> stackint=new Stack<Integer>();
+//		 WhichConstructor wc = new WhichConstructor("test"); 
+		int a=2;
+		System.out.println("mamal"+a++);
+	
+	
+	
+	}}
+ class A { 
+	 public A() { 
+	 m1(); 
+	 } 
+	 public void m1() { 
+	 System.out.print("a good "); 
+	 } 
+	 public void m2() { 
+	 System.out.print("as a "); 
+	 } 
+	}
+	 class B extends A { 
+	 public B() { 
+	 System.out.print("cook "); 
+	 } 
+	}
+	 class C extends B { 
+	 public C() { 
+	 System.out.print("as much "); 
+	 } 
+	 public void m1() { 
+	 System.out.print("could "); 
+	 } 
+	 public void m2() { 
+	 System.out.print("cookies as "); 
+	 } 
+	}
+	 class D extends B { 
+	 public D() { 
+	 System.out.print("who could "); 
+	 m2(); 
+	 } 
+	 public void m1() { 
+	 System.out.print("cookies as "); 
+	 super.m1(); 
+	 } 
+	 public void m2() { 
+	 System.out.print("cook cookies "); 
+	 } 
+	}
+
